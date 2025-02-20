@@ -6,14 +6,11 @@ public class Main {
 		// TODO Auto-generated method stub
 		Locale.setDefault(Locale.US);
 		int y = 32;
+
 		double x = 10.5345345;
 		
-		System.out.println("oi leo");
-		System.out.println(y);
-		System.out.println(x);
-		System.out.printf("%.2f", x);
-		
-		
+		System.out.println("oi leo" + y);
+		System.out.println("oi leo" + x);
 
 	}
 

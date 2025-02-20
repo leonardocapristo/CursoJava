@@ -1,16 +1,25 @@
 package entradaDeDados;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class EntradaDeDados {
 
 	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		String x;
+		String nome;
+		int x;
+		double y;
 		
-		x = sc.next();
-		System.out.println("Voce digitou: ");
+		nome = sc.next();
+		x = sc.nextInt();
+		y = sc.nextDouble();
+		
+		System.out.printf("Voce digitou: %d ", x);
+		System.out.printf("Voce digitou: %.2f ", y);
+		System.out.printf("Voce digitou: %s ", nome);
 		
 		sc.close();
 	}
