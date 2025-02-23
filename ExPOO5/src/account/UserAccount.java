@@ -45,7 +45,7 @@ public class UserAccount {
 
 	
 	public void withdrawal(double withdrawalDeposit) {
-		this.moneyAccount -= withdrawalDeposit;
+		this.moneyAccount -= withdrawalDeposit + 5;
 	}
 	
 	public String toString() {
