@@ -32,9 +32,13 @@ public class Program {
         System.out.print("Digite quantos produtos quer adicionar ao seu pedido: ");
         int n = sc.nextInt();
         sc.nextLine(); // Limpa o buffer após nextInt()
-
+        
+        
+        OrderStatus status = OrderStatus.PROCESSING;
         LocalDateTime moment = LocalDateTime.now();
-        Order order = new Order(moment, OrderStatus.PROCESSING, client);
+        
+        
+        Order order = new Order(moment, status, client);
 
         for (int i = 1; i <= n; i++) {
             System.out.println("Digite o nome do produto "+ i +" : " );
