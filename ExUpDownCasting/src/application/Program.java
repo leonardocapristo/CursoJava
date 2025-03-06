@@ -15,9 +15,9 @@ public class Program {
 		
 		
 		
-		bacc.deposit(200);
+
 		
-		System.out.println(bacc);
+
 
 	}
 

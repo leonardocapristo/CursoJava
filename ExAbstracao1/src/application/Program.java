@@ -52,28 +52,20 @@ public class Program {
 				listaPessoas.add(pessoaJuridica);
 			}
 
-			
-			
-			
-
-		
-
 		}
-		
-		
-		
+
 		System.out.println("Impostos Pagos");
-		
+
 		double soma = 0;
-		
+
 		for (int j = 0; j < listaPessoas.size(); j++) {
 
 			System.out.println("Nome: " + listaPessoas.get(j).getNome() + ", R$ : " + listaPessoas.get(j).imposto());
-			
+
 			soma += listaPessoas.get(j).imposto();
 
 		}
-		
+
 		System.out.println("Total : " + soma);
 
 		sc.close();
