@@ -49,7 +49,7 @@ public class Program {
 				} else if (x == 0) {
 				    break;
 				} else {
-				    System.out.println("Opção inválida, tente novamente: ");
+				    System.out.println("Opção inválida, por favor tente novamente: ");
 				}
 
 			}
