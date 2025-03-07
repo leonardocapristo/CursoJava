@@ -6,8 +6,11 @@ import java.util.Scanner;
 import entities.Account;
 import exceptions.LimiteInsuficienteException;
 import exceptions.SaqueException;
+import exceptions.TesteException;
 
 public class Program {
+	
+	/*Exception te obriga a tratar e propragar, RuntimeException nao obriga tratar e propragar, mas quebra o c'odigo */
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -62,6 +65,11 @@ public class Program {
 			System.out.println(e.getMessage());
 		}catch (InputMismatchException e) {
 			System.out.println("dados invalidos");
+			System.out.println("Exception padrao do java");
+		}catch (TesteException e) {
+			System.out.println(e.getLocalizedMessage() + "testando 123");
+		}catch (RuntimeException e) {
+			System.out.println("Qualquero erro inesperado na execucao");
 		}
 
 		sc.close();

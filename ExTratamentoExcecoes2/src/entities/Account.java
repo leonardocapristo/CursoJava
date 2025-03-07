@@ -2,6 +2,7 @@ package entities;
 
 import exceptions.LimiteInsuficienteException;
 import exceptions.SaqueException;
+import exceptions.TesteException;
 
 public class Account {
 
@@ -60,13 +61,17 @@ public class Account {
 
 	}
 
-	public void withdraw(Double amount) throws SaqueException,LimiteInsuficienteException {
+														/*Propagando as excecoes, se elas fossem RuntimeException nao precisaria */
+	
+	public void withdraw(Double amount) throws SaqueException,LimiteInsuficienteException, TesteException {
 		
 		if (this.balance <= 0 ) {
 			 throw new SaqueException();
 		} 
 		else if (amount > withdrawLimit) {
 			throw new LimiteInsuficienteException();
+		} else if (amount == 0) {
+			throw new TesteException();
 		}
 		this.balance -= amount;
 	}
