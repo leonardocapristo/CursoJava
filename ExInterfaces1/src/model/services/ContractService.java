@@ -2,6 +2,7 @@ package model.services;
 
 import java.time.LocalDate;
 
+
 import model.entities.Contract;
 import model.entities.Installment;
 
@@ -34,8 +35,10 @@ public class ContractService {
 
 	public void processContract(Contract contract, Integer months) {
 		
-		double amountPaymentFee = onlinePaymentService.paymentFee(contract.getTotalValue());
 		double amountPerInstallment = contract.getTotalValue() / months;
+		
+		double amountPaymentFee = onlinePaymentService.paymentFee(contract.getTotalValue());
+	
 		double amountInterest = onlinePaymentService.interest(amountPerInstallment, months);
 		
 		double amount = amountPerInstallment + amountInterest + amountPaymentFee;
@@ -43,16 +46,26 @@ public class ContractService {
 		
 		 for (int i = 1; i <= months; i++) {
 	            LocalDate dueDate = contract.getDate().plusMonths(i);
-
-	            Installment installment = new Installment(dueDate, amount);
+/*
+  				Installment installment = new Installment(dueDate, amount);
 	            
 	            contract.getInstallments().add(installment);
+ */
 	            
-	            System.out.println(installment +""+ amount);
+	            
+	            contract.getInstallments().add(new Installment(dueDate, amount));
+	            
+	            
 	            
 	        }
 		
-		
+		 for (int i = 0; i < contract.getInstallments().size(); i++) {
+	
+			    System.out.println(contract.getInstallments().get(i));
+
+
+			}
+
 		
 		
 		
