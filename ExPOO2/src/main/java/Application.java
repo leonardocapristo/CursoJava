@@ -46,6 +46,6 @@ public class Application {
         System.out.println(product);
         System.out.println("total valor no estoque : " + product.totalValueInStock());
 
-
+     wdw
     }
 }
