@@ -44,7 +44,7 @@ public class Application {
         product.removeProducts(remove);
 
         System.out.println(product);
-        System.out.println("total valor no estoque : " + product.totalValueInStock());
+        System.out.println("Total valor no estoque : " + product.totalValueInStock());
 
 
     }
