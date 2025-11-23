@@ -1,5 +1,5 @@
 
-package entities;
+package util;
 
 public class Account {
 

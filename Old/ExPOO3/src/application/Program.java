@@ -2,7 +2,7 @@ package application;
 
 import java.util.Scanner;
 
-import entities.Student;
+import util.Student;
 
 public class Program {
 

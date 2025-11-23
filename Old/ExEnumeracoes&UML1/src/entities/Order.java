@@ -1,10 +1,10 @@
-package entities;
+package util;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import entities.enums.OrderStatus;
+import util.enums.OrderStatus;
 
 public class Order {
 	private LocalDateTime moment;

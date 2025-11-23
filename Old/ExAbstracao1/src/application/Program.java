@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entities.Pessoa;
-import entities.PessoaFisica;
-import entities.PessoaJuridica;
+import util.Pessoa;
+import util.PessoaFisica;
+import util.PessoaJuridica;
 
 public class Program {
 

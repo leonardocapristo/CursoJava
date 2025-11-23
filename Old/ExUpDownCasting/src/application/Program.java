@@ -1,7 +1,7 @@
 package application;
 
-import entities.Account;
-import entities.BusinessAccount;
+import util.Account;
+import util.BusinessAccount;
 
 public class Program {
 

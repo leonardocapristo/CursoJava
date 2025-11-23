@@ -1,4 +1,4 @@
-import entities.Product;
+import util.Product;
 
 import java.util.Scanner;
 

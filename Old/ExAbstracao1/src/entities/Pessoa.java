@@ -1,4 +1,4 @@
-package entities;
+package util;
 
 public abstract class Pessoa {
 	

@@ -1,4 +1,4 @@
-package entities;
+package util;
 
 import exceptions.LimiteInsuficienteException;
 import exceptions.SaqueException;

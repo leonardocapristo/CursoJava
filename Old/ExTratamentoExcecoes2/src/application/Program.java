@@ -3,7 +3,7 @@ package application;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import entities.Account;
+import util.Account;
 import exceptions.LimiteInsuficienteException;
 import exceptions.SaqueException;
 import exceptions.TesteException;

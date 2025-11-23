@@ -5,11 +5,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-import entities.Client;
-import entities.Order;
-import entities.OrderItem;
-import entities.Product;
-import entities.enums.OrderStatus;
+import util.Client;
+import util.Order;
+import util.OrderItem;
+import util.Product;
+import util.enums.OrderStatus;
 
 public class Program {
 

@@ -1,4 +1,4 @@
-import entities.Employee;
+import util.Employee;
 
 import java.util.Scanner;
 

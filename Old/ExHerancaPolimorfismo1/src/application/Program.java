@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entities.Employee;
-import entities.OutsourcedEmployee;
+import util.Employee;
+import util.OutsourcedEmployee;
 
 public class Program {
 
