@@ -10,7 +10,7 @@ public class Application {
         int number;
         String holder;
         double balance, deposit, withdraw;
-        String initialDeposit;
+        char initialDeposit;
 
         System.out.println("Enter account number : ");
         number = sc.nextInt();
@@ -21,11 +21,11 @@ public class Application {
         sc.nextLine();
 
         System.out.println("Is there a initial deposit (y/n) ? ");
-        initialDeposit = sc.nextLine();
+        initialDeposit = sc.next().charAt(0);
 
         Account account = new Account();
 
-        if (initialDeposit.equals("y")) {
+        if (initialDeposit == 'y') {
 
             System.out.println("Enter initial deposit value : ");
             balance = sc.nextDouble();
@@ -34,7 +34,7 @@ public class Application {
             account.setBalance(balance);
             account.setNumber(number);
 
-        } else if (initialDeposit.equals("n")) {
+        } else if (initialDeposit == 'n') {
 
 
             account.setNumber(number);
