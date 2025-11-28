@@ -11,7 +11,15 @@ public class Gato extends Animal {
         this.raca = raca;
     }
 
+
     public String miar (){
        return "Miaaaaaaaau";
+    }
+
+    @Override
+    public String toString() {
+        return "Gato{" +
+                "raca='" + raca + '\'' +
+                '}';
     }
 }

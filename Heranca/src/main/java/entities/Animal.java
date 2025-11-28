@@ -10,4 +10,15 @@ public class Animal {
 
     public Animal() {
     }
+
+    public String acao(){
+        return "todo animal faz isso";
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "nome='" + nome + '\'' +
+                '}';
+    }
 }
