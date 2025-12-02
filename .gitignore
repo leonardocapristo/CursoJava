@@ -5,21 +5,18 @@ out/
 .idea/
 *.iml
 
-<<<<<<< HEAD
 ### Eclipse (nao tirar .project e .classpath) ###
 .metadata/
 .apt_generated
 
 .factorypath
 
-=======
 ### Eclipse ###
 
 ### nao tire .project .classpath ###
 .metadata/
 .apt_generated
 .factorypath
->>>>>>> 87447e1 (arrumando projetos)
 .settings
 .springBeans
 .sts4-cache
