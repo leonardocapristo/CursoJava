@@ -1,7 +1,10 @@
 package services;
 
 import entities.Contract;
+import entities.Installment;
 import interfaces.OnlinePaymentService;
+
+import java.time.LocalDate;
 
 public class ContractService {
 
@@ -13,7 +16,22 @@ public class ContractService {
 
     public void processContract(Contract contract, int months){
 
-        onlinePaymentService.
+        double basicQuota = contract.getTotalValue() / months;
+
+        for (int i = 1; i <= months; i++) {
+            LocalDate dueDate = contract.getDate().plusMonths(i);
+
+            double interest = this.onlinePaymentService.interest(i , months);
+
+            double fee = this.onlinePaymentService.paymentFee(basicQuota + interest);
+            double quota = basicQuota + interest + fee;
+
+            contract.getInstallments().add(new Installment(dueDate, quota));
+
+        }
+
+
+
 
     }
 }

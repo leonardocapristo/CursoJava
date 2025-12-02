@@ -1,4 +1,7 @@
 import entities.Contract;
+import entities.Installment;
+import interfaces.OnlinePaymentService;
+import interfaces.implementation.PayPalService;
 import services.ContractService;
 
 import java.time.LocalDate;
@@ -9,7 +12,7 @@ public class Application {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         System.out.println("Entre os dados do contrato:");
 
@@ -28,7 +31,15 @@ public class Application {
         System.out.print("Entre com o numero de parcelas: ");
         int installments = sc.nextInt();
 
-        ContractService service = new ContractService();
+        ContractService contractService = new ContractService(new PayPalService());
+
+        contractService.processContract(contract, installments);
+
+        for (Installment installment : contract.getInstallments()){
+            System.out.println(installment);
+
+        }
+
 
 
 

@@ -1,11 +1,14 @@
 package entities;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Installment {
 
     protected LocalDate duedate;
     protected Double amount;
+
+    protected DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
     public Installment() {
     }
@@ -29,5 +32,10 @@ public class Installment {
 
     public void setAmount(Double amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return " parcelas : " + duedate + " R$ : "+ amount;
     }
 }

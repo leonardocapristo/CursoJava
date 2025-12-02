@@ -3,13 +3,15 @@ package interfaces.implementation;
 import interfaces.OnlinePaymentService;
 
 public class PayPalService implements OnlinePaymentService {
+
     @Override
-    public double paymentFee() {
-        return 0;
+    public double paymentFee(double amount) {
+        return amount * 0.02;
     }
 
     @Override
-    public double interest() {
-        return 0;
+    public double interest(double amount, int months) {
+        return amount * 0.01 * months;
     }
+
 }
