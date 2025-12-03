@@ -5,12 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>CursoJava</groupId>
-    <artifactId>ExInterfaces</artifactId>
+    <artifactId>Interfaces</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>ExInterfaces2</module>
-    </modules>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
