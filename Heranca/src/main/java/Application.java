@@ -9,7 +9,7 @@ public class Application {
 
 
 
-        // UP CASTING (acessar metodos da classe pai animal)  
+        // UP CASTING (acessar metodos da classe pai animal)
         Animal gatoAnimal = new Gato("nikiba","vira lata");
 
 
