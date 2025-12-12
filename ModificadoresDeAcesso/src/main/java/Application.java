@@ -8,5 +8,6 @@ public class Application {
         Pessoa pessoa = new PessoaCLT("leo", 24, 1000.0);
 
         System.out.println(((PessoaCLT) pessoa).mostrarDados());
+        ((PessoaCLT) pessoa).mostrarDados();
     }
 }
