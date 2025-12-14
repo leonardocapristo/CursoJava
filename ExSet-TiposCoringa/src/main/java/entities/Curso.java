@@ -2,8 +2,9 @@ package entities;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class Cursos {
+public class Curso {
 
     String nome;
 
@@ -11,7 +12,7 @@ public class Cursos {
 
     List<Aluno> alunos = new ArrayList<>();
 
-    public Cursos(String nome, Instrutor instrutor) {
+    public Curso(String nome, Instrutor instrutor) {
         this.nome = nome;
         this.instrutor = instrutor;
     }
@@ -34,5 +35,19 @@ public class Cursos {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Curso)) return false;
+        Curso curso = (Curso) o;
+        return Objects.equals(nome, curso.nome);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome);
     }
 }

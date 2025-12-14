@@ -7,14 +7,14 @@ public class Instrutor extends Usuario{
 
 
 
-    List<Cursos> cursos = new ArrayList<>();
+    List<Curso> cursos = new ArrayList<>();
 
 
     public Instrutor(Integer id) {
         super(id);
     }
 
-    public List<Cursos> getCursos() {
+    public List<Curso> getCursos() {
         return cursos;
     }
 

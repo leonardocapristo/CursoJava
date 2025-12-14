@@ -2,6 +2,7 @@ package entities;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Aluno extends Usuario{
 
@@ -9,11 +10,28 @@ public class Aluno extends Usuario{
         super(id);
     }
 
-    private List<Cursos> listaCursos = new ArrayList<>();
+    private List<Curso> cursos = new ArrayList<>();
 
 
-    public List<Cursos> getListaCursos() {
-        return listaCursos;
+    public List<Curso> getCursos() {
+        return cursos;
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Aluno aluno = (Aluno) o;
+        return Objects.equals(this.id, aluno.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.id);
+    }
+
+
 
 }

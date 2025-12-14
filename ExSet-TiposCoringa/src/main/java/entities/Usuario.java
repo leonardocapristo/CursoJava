@@ -2,7 +2,7 @@ package entities;
 
 public abstract class Usuario {
 
-    private Integer id;
+    protected Integer id;
 
     public Usuario(Integer id) {
         this.id = id;
@@ -15,4 +15,9 @@ public abstract class Usuario {
     public void setId(Integer id) {
         this.id = id;
     }
+
+
+
+
+
 }
